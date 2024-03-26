@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profils', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->id();
+            $table->string('last_name');
+            $table->string('first_name');
+            $table->string('img');
+            $table->enum('status', ['inactive', 'active', 'awaiting']);
             $table->timestamps();
         });
     }
