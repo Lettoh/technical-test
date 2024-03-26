@@ -11,9 +11,4 @@ class Profile extends Model
 
     protected $fillable = ["last_name", 'first_name', "img", "status"];
 
-    public function add($array)
-    {
-        return parent::create($array);
-    }
-
 }
